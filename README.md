@@ -7,7 +7,8 @@
 
 The fastest way to get started is using [Docker Compose](https://docs.docker.com/compose/):
 
-* Add your publicly available FQDN or IP address to the `PUBLIC_HOSTNAME` variable in the `.env` file
+* Create a `.env` file by coping it from `_.env`
+* Add your publicly available FQDN or IP address to the `PUBLIC_HOSTNAME` variable in the `.env` file and save it
 * Execute the following command:
 
   ```shell
@@ -193,6 +194,12 @@ For a good user experience set up your Docker environment accordingly:
 ![Docker MAC Seetings](docs/docker_daemon.png)
 
 ---
+
+#### Slow Startup
+
+On some linux systems the following problem arises: https://stackoverflow.com/questions/27612209/spring-boot-application-wont-boot-at-startup-inside-docker
+
+The easiest way right now to fix it is the following: ```bash apt-get install haveged -y```
 
 ## Haftungsausschluss
 
